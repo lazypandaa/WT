@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+        <title>registration form</title>
+        
+    </head>
+<body align="center">
+<form>
+<fieldset>
+<h1>Login page</h1>
+
+        <legend>USER LOGIN</legend>
+    <table border="0" align="center">
+        <tr>
+            <td>User ID : </td>
+            <td><input type="text" Id="A"></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="password" Id="B"></td>
+        </tr>
+        <tr>
+	<td> </td>
+            <td><button onclick="check()">Login</button>
+                <button type="reset">clear</button></td>
+        </tr>      
+    </table>
+    <script>
+        function check()
+        {
+            var a =document.getElementById("A").value;
+            var b =document.getElementById("B").value;
+             
+            if (a=="panda") 
+            {
+                if(b=="panda"){
+                    window.open('file:///C:/Users/Admin/Downloads/LAZYPANDA/SUM.HTML'); 
+                    }
+                    
+            }
+            else{
+                        alert ("Unsucesfull login");
+                    }
+        
+        }
+    </script>
+</fieldset>
+</form>
+</body>
+</html>

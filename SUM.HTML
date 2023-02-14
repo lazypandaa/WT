@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum no no's</title>
+</head>
+<body>
+    Enter a: <input type="number" Id="A">
+    Enter b: <input type="number" Id="B">
+    <button onclick="sum()">sum</button>
+    <!-- <p>sum is </p> -->
+    <p id="sum"> </p>
+    <script>
+        function sum()
+        {
+            var a=document.getElementById("A").value;
+            a=parseInt(a);
+            var b=document.getElementById("B").value;
+            b=parseInt(b);
+            var c=a+b;
+            document.getElementById("sum").innerHTML="sum is "+c;
+        }
+    </script>
+</body>
+</html>
