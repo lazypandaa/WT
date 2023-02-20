@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>registration form</title>  
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+<body align="center">
+<form action="#" onsubmit="formchk()">
+    <fieldset>
+        <legend>REGISTRATION</legend>
+    <table border="0" align="center" >
+        <tr>
+            <td>First name : </td>
+            <td><input type="text" id="FN" class="form-control"></td>
+            <td><p id="FNE" class="errormsg"></p></td>
+        </tr>
+        <tr>
+            <td>Last name : </td>
+            <td><input type="text" id="LN" class="form-control"></td>
+            <td><p id="LNE" class="errormsg"></p></td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><input type="email" id="E" class="form-control"></td>
+            <td><p id="EE" class="errormsg"></p></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="password" maxlength="8" id="P" class="form-control"></td>
+            <td><p id="PE" class="errormsg"></p></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" value="male" name="namee">male<input name="namee" type="radio" value="female">female</td>
+        </tr>
+        <tr>
+            <td>Hobbies:</td>
+            <td><input type="checkbox">bike riding
+	<input type="checkbox">car riding
+	<input type="checkbox">boat riding</td>
+        </tr>
+
+        <tr>
+            <td>Country: </td>
+            <td>
+                <select>
+                    <option>india</option>
+                    <option>Russia</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+	<td>Addrs:</td>
+            <td colspan="3">
+                <textarea rows="3" cols="50"></textarea>
+            </td>
+        </tr>
+    <tr>   
+    </table>
+    <table border="0" align="center">
+ <fieldset>
+        <legend>Personal</legend>        
+	<tr>
+            <td>Name : </td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><input type="email"></td>
+        </tr>
+	<tr>
+            <td>DOB : </td>
+            <td><input type="date"></td>
+        </tr>
+    </fieldset> 
+</tr>
+<tr>
+<td colspan="4">
+   
+</td>
+</tr>
+<tr>
+            <td><button type="submit" class="btn btn-success" onsubmit="formchk()">submit</button></td>
+            <td><button type="reset" class="btn btn-success">reset</button></td>
+        </tr>	
+    </table>
+    </fieldset>
+</form>
+
+
+<script>
+function formchk(){
+	var n=document.getElementById("FN").value;
+	var ln=document.getElementById("LN").value;
+	var p=document.getElementById("P").value;
+	var e=document.getElementById("E").value;
+
+	var letters=/^[A-Za-z]+$/;
+    var password=/^[A-Za-z0-9]+$/;
+    var email=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+if(n=="")
+    {
+        document.getElementById("FNE").innerHTML="*First name empty";
+    }
+if(n!="")
+{
+	if(!letters.test(n))
+        {
+            // alert ("Incorrect input in Input");
+            document.getElementById("FNE").innerHTML="*Error in First name";
+        }
+}
+
+if(ln=="")
+        {
+document.getElementById("LNE").innerHTML="*Last name empty";
+
+}
+if(ln!="")
+{
+    if(!letters.test(ln))
+        {
+            // alert ("Incorrect input in Input");
+            document.getElementById("LNE").innerHTML="*Invalid char in Last name ";
+        }
+}
+
+if(p=="")
+    {
+        document.getElementById("PE").innerHTML="*Password empty";
+    }
+if(p!="")
+{
+    if(!password.test(p))
+        {
+            document.getElementById("PE").innerHTML="*invalid symbol in Password";
+        }
+}
+
+if(e=="")
+        {
+document.getElementById("EE").innerHTML="*Empty Email";
+
+}
+if(e!="")
+{
+    if(!email.test(e))
+        {
+            document.getElementById("EE").innerHTML="*Error in Email";
+        }            
+}
+}
+</script>
+</body>
+</html>
