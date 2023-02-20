@@ -1,0 +1,19 @@
+body{
+    background-image: url(headbg.png);
+    color: black;
+    font-family: fantasy;
+}
+p.errormsg{
+    font-style:italic;
+    color: blue;
+}
+table{
+	border-collapse:collapse;
+}
+tr{
+	line-height: 20px;
+	border-collapse:separate;
+    border-spacing:0 15px;
+}
+/* border-spacing:0 15px; */
+/* } */
