@@ -33,8 +33,11 @@ body{
 <h1>AANM & VVRSR COLLEGE MANAGEMENT </h1>
 <table class="nav">
 <tr>
+<td><input id="S" type="text" placeholder="Search.."></td>
+<td><button onclick="check()" class="btn btn-success">GO</button></td>
+<td> </td>
 <td><a href="loginjs.html">Login   </a></td>
-<td><a href="reg.html">Register</a></td>
+<td><a href="regnew.html">Register</a></td>
 </tr>
 </table>
 
@@ -68,6 +71,18 @@ Sri. Adsumilli Aswardha Narayana Murthy
 </tbody>
 </table>
 </div>
+
+<script>
+        function check()
+        {
+            var a =document.getElementById("S").value;     
+	if (a=="p") {
+
+			alert ("sucesfull serch");
+                    window.open('about.html');        
+        }
+}
+    </script>
 
 </body>
 </html>
