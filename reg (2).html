@@ -1,37 +1,52 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>registration form</title>   
-    <style>
-        body{
+        <title>registration form</title>  
+        <link rel="stylesheet" href="style.css"> 
+        <style>
+            body{
     background-image: url(headbg.png);
     color: black;
     font-family: fantasy;
-
 }
-    </style>
+p.errormsg{
+    font-style:italic;
+    color: blue;
+}
+table{
+	border-collapse:collapse;
+}
+tr{
+	line-height: 30px;
+	border-collapse:separate;
+    border-spacing:0 15px;
+}
+        </style>
     </head>
 <body align="center">
-<form>
+<form action="#" onsubmit="formchk()">
     <fieldset>
         <legend>REGISTRATION</legend>
     <table border="0" align="center" >
         <tr>
             <td>First name : </td>
-            <td><input type="text" id="FN"></td>
+            <td><input type="text" id="FN" class="form-control"></td>
+            <td><p id="FNE" class="errormsg"></p></td>
         </tr>
         <tr>
             <td>Last name : </td>
-            <td><input type="text" id="LN"></td>
+            <td><input type="text" id="LN" class="form-control"></td>
+            <td><p id="LNE" class="errormsg"></p></td>
         </tr>
         <tr>
             <td>Email : </td>
-            <td><input type="email" id="E"></td>
+            <td><input type="email" id="E" class="form-control"></td>
+            <td><p id="EE" class="errormsg"></p></td>
         </tr>
         <tr>
             <td>Password : </td>
-            <td><input type="password" maxlength="8" id="P"></td>
+            <td><input type="password" minlength="8" id="P" class="form-control"></td>
+            <td><p id="PE" class="errormsg"></p></td>
         </tr>
         <tr>
             <td>Gender:</td>
@@ -84,7 +99,7 @@
 </td>
 </tr>
 <tr>
-            <td><button class="btn btn-success" onclick="formchk()">submit</button></td>
+            <td><button type="submit" class="btn btn-success">submit</button></td>
             <td><button type="reset" class="btn btn-success">reset</button></td>
         </tr>	
     </table>
@@ -96,10 +111,63 @@
 function formchk(){
 	var n=document.getElementById("FN").value;
 	var ln=document.getElementById("LN").value;
+	var p=document.getElementById("P").value;
+	var e=document.getElementById("E").value;
+
 	var letters=/^[A-Za-z]+$/;
-	if(!letters.test(n) || !letters.test(ln))
+    var password=/^[A-Za-z0-9]+$/;
+    var email=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+if(n=="")
+    {
+        document.getElementById("FNE").innerHTML="*First name empty";
+    }
+if(n!="")
 {
-	alert ("Incorrect input in Input");
+	if(!letters.test(n))
+        {
+            // alert ("Incorrect input in Input");
+            document.getElementById("FNE").innerHTML="*Error in First name";
+        }
+}
+
+if(ln=="")
+        {
+document.getElementById("LNE").innerHTML="*Last name empty";
+
+}
+if(ln!="")
+{
+    if(!letters.test(ln))
+        {
+            // alert ("Incorrect input in Input");
+            document.getElementById("LNE").innerHTML="*Invalid char in Last name ";
+        }
+}
+
+if(p=="")
+    {
+        document.getElementById("PE").innerHTML="*Password empty";
+    }
+if(p!="")
+{
+    if(!password.test(p))
+        {
+            document.getElementById("PE").innerHTML="*invalid symbol in Password";
+        }
+}
+
+if(e=="")
+        {
+document.getElementById("EE").innerHTML="*Empty Email";
+
+}
+if(e!="")
+{
+    if(!email.test(e))
+        {
+            document.getElementById("EE").innerHTML="*Error in Email";
+        }            
 }
 }
 </script>
