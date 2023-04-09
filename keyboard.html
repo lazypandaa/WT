@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+</script>
+
+
+</head>
+<body>
+
+<h1>KEyboard</h1>
+<input style="width:30%; align:center;" type="text" class="form-control" placeholder="Enter ">
+
+<p>Count is 
+<span>0</span>
+</p>
+
+
+
+
+<script>
+
+i=0;
+
+$(document).ready(function(){
+
+$("input").keydown(function(){
+
+$("input").css("background-color","green");
+
+});
+
+$("input").keyup(function(){
+
+$("input").css("background-color","orange");
+
+});
+$("input").keypress(function(){
+
+$("span").text(i+=1);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

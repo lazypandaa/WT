@@ -1,0 +1,38 @@
+
+<html>  
+
+<head>
+
+
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+  
+
+<body align="center">  
+      
+<h1>ANGULARjs</h1>
+<div ng-app = "" ng-init = "countries = [
+{locale:'Eswar',name:'India'}, 
+{locale:'Maniraju',name:'Pakistan'},
+ {locale:'Jassi',name:'Australia'}]">
+<p>Name <input type = "text" ng-model = "name"></p>
+<p>You Entered:  <span ng-bind = "name"></span></p>  
+        
+         
+<ol>  
+            
+<li ng-repeat = "country in countries">  
+               
+{{ 'name: ' + country.locale + ' ,Country: ' + country.name }}  
+            
+</li>  
+         
+</ol>  
+      
+</div>  
+
+  
+
+</body>  
+
+</html>  

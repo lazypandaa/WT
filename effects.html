@@ -1,0 +1,87 @@
+<html>
+
+<head>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+
+
+<body align="center">
+
+
+<br>
+<button type="button" class="btn btn-success"  id="hide">hide</button>
+
+<button type="button" class="btn btn-success" id="show">show</button>
+
+<button type="button"  class="btn btn-success" id="fadeout">fadeout</button>
+<button type="button" class="btn btn-success" id="fadein">fadein</button>
+<button type="button" class="btn btn-success" id="fadetoggle">fadetoggle</button>
+
+<button type="button" class="btn btn-success" id="slideup">slideup</button>
+
+<button type="button" class="btn btn-success" id="slidedown">slidedown</button>
+
+<button type="button" class="btn btn-success" id="slidetoggle">slidetoggle</button>
+
+<h1 class="p1">Welcome to WT lab</h1>
+
+<h2>Exam on WT</h2>
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+$("#show").click(function(){
+
+$(".p1").show()
+});
+
+$("#hide").click(function(){
+
+$(".p1").hide()
+});
+
+$("#fadein").click(function(){
+
+$(".p1").fadeIn()
+});
+
+$("#fadeout").click(function(){
+
+$(".p1").fadeOut()
+});
+
+$("#fadetoggle").click(function(){
+
+$(".p1").fadeToggle()
+});
+
+$("#slideup").click(function(){
+
+$(".p1").slideUp()
+});
+
+$("#slidedown").click(function(){
+
+$(".p1").slideDown()
+});
+
+$("#slidetoggle").click(function(){
+
+$(".p1").slideToggle()
+});
+});
+
+</script>
+
+</body>
+
+</html>
+
+
